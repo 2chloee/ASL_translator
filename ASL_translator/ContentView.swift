@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var text: String = ""
     var body: some View {
         
         NavigationStack {
@@ -23,25 +24,26 @@ struct ContentView: View {
                     .toolbar{
                         NavigationLink(destination: WordOfTheDay()) {
                             Text("Word of The Day")
-                                .font(.body)
+                                .font(.footnote)
                                 .fontWeight(.light)
+                                .multilineTextAlignment(.leading)
                         }
                         
                         NavigationLink(destination: HistoryOfASL()) {
                             Text("History")
-                                .font(.body)
+                                .font(.footnote)
                                 .fontWeight(.light)
                         }
-                        
+                                                
                         NavigationLink(destination: Famous_DHOH_People()) {
                             Text("Famous DHOH")
-                                .font(.body)
+                                .font(.footnote)
                                 .fontWeight(.light)
                         }
                         
                         NavigationLink(destination: Alphabet()) {
                             Text("Alphabet")
-                                .font(.body)
+                                .font(.footnote)
                                 .fontWeight(.light)
                         }
                     }
@@ -50,8 +52,12 @@ struct ContentView: View {
                 
             }
             
-            Text("Enter text to be translated:")
-            let text = readLine()
+            TextField(
+                "Enter text to be translated:",
+                    text: $text
+            )                       .font(.body)
+                .fontWeight(.regular)
+                .frame(maxHeight: .infinity, alignment: .center)
             
             }
             
