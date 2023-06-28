@@ -54,13 +54,34 @@ struct ContentView: View {
                     }
                 
             }
-            
-            TextField(
-                "Enter text to be translated...",
-                    text: $text
-            )                       .font(.body)
-                .fontWeight(.regular)
-                .multilineTextAlignment(.center)
+            VStack(){
+                
+                TextField(
+                    "Enter text to be translated...",
+                    text: $text, axis: .vertical
+                )                       .font(.body)
+                    .fontWeight(.regular)
+                    .multilineTextAlignment(.leading)
+                    .fontWeight(.regular)
+                    
+                
+                    .frame(maxHeight: .infinity, alignment: .center)
+                    .padding()
+                    .background(Rectangle()
+                        .foregroundColor(.white))
+                    .cornerRadius(15)
+                    .shadow(radius: 20)
+                    .padding()
+                    .padding()
+                    .padding()
+                    .padding()
+                
+                
+                Button("Submit") {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }
+                
+            }
             
             }
             
