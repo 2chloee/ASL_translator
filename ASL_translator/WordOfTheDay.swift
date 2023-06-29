@@ -1,98 +1,66 @@
 //
-//  ContentView.swift
+//  WordOfTheDay.swift
 //  ASL_translator
 //
-//  Created by Chloe Low on 6/26/23.
+//  Created by Chloe Low on 6/27/23.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-    @State private var text: String = ""
-    let signs =
-        ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
-        "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
-        "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x",
-        "y", "z"]; // for translating text into sign language
+struct WordOfTheDay: View {
+    @State private var userInput = ""
+    @State private var selectedWord = ""
+    
+    let wordOfTheDay = ["Gist", "Obstinate", "Meet-cute", "Concatenate", "Yips", "Trenchant", "Blandishment", "Etiquette", "Saturnine", "Advocate", "Redux", "Inchmeal", "Fruiton", "Dissemble", "Vox populi", "Perennial", "Microcosm", "Reconcile", "Indomitable", "Nudnik", "Assuage", "Jaundiced", "Hashtag", "Sashay", "Lambent", "Consigliere", "Pungent", "Kludge", "Dyed in the wool"]
+    
     var body: some View {
         
-        NavigationStack {
-        
-        ZStack {
+        VStack(alignment: .center) {
             
-            VStack {
-                
-                Text("ASL Translator")
-                    .font(.largeTitle)
-                    .fontWeight(.light)
-                    .frame(maxHeight: .infinity, alignment: .top)
-                
-                    .toolbar{
-                        NavigationLink(destination: WordOfTheDay()) {
-                            Text("Word of The Day")
-                                .font(.footnote)
-                                .fontWeight(.light)
-                                .multilineTextAlignment(.leading)
-                        }
-                        
-                        NavigationLink(destination: HistoryOfASL()) {
-                            Text("History")
-                                .font(.footnote)
-                                .fontWeight(.light)
-                        }
-                                                
-                        NavigationLink(destination: Famous_DHOH_People()) {
-                            Text("Famous DHOH")
-                                .font(.footnote)
-                                .fontWeight(.light)
-                        }
-                        
-                        NavigationLink(destination: Alphabet()) {
-                            Text("Alphabet")
-                                .font(.footnote)
-                                .fontWeight(.light)
-                        }
-                    }
-                
-            }
-            VStack(){
-                
-                TextField(
-                    "Enter text to be translated...",
-                    text: $text, axis: .vertical
-                )                       .font(.body)
-                    .fontWeight(.regular)
-                    .multilineTextAlignment(.leading)
-                    .fontWeight(.regular)
-                    
-                
-                    .frame(maxHeight: .infinity, alignment: .center)
-                    .padding()
-                    .background(Rectangle()
-                        .foregroundColor(.white))
-                    .cornerRadius(15)
-                    .shadow(radius: 20)
-                    .padding()
-                    .padding()
-                    .padding()
-                    .padding()
-                
-                
-                Button("Submit") {
-                    
+            Text("Word of the Day")
+                .font(.largeTitle)
+                .fontWeight(.light)
+                .frame(alignment: .top)
+            
+            TextField("What day of the month is it?", text: $userInput)
+                .font(.body)
+                .multilineTextAlignment(.center)
+            
+            Button(action: {
+                let getWord = Int(userInput) ?? 0
+                if getWord >= 1 && getWord <= wordOfTheDay.count {
+                    selectedWord = wordOfTheDay[getWord - 1]
+                } else {
+                    selectedWord = ""
                 }
-                
+            }) {
+                Text("Submit")
             }
             
+            if selectedWord.isEmpty {
+                Spacer()
+                Text("No word selected.")
+                    .font(.headline)
+                    .foregroundColor(.blue)
+            } else {
+                Spacer()
+                Text((selectedWord))
+                    .font(.headline)
+                Spacer()
+                
+                
+                Text("according to merriam-webster")
+                
             }
             
         }
-        
     }
 }
+    struct WordOfTheDay_Previews: PreviewProvider {
+        static var previews: some View {
+            WordOfTheDay()
+                
+            
+        }
+    }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
