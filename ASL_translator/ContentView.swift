@@ -24,8 +24,8 @@ struct ContentView: View {
             
             VStack {
                 Text("ASL Translator")
-                    .font(.largeTitle)
-                    .fontWeight(.light)
+                    .font(Font.custom("BacasimeAntique-Regular", size : 30))
+//                    .fontWeight(.light)
                     .frame(maxHeight: .infinity, alignment: .top)
                 
                     .toolbar{
