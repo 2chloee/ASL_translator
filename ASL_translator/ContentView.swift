@@ -19,6 +19,8 @@ struct ContentView: View {
         NavigationStack {
         
         ZStack {
+            Color(red: 104/255, green: 161/255, blue: 218/255)
+                .ignoresSafeArea()
             
             VStack {
                 Text("ASL Translator")
