@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32AD6DC02A4E0A1200533CC0 /* ASL-translator-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32AD6DBF2A4E086D00533CC0 /* ASL-translator-Info.plist */; };
 		32AD6DC72A4E0DBC00533CC0 /* BacasimeAntique-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32AD6DC62A4E0DBC00533CC0 /* BacasimeAntique-Regular.ttf */; };
 		32AD6DC92A4E0E5A00533CC0 /* bagel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32AD6DC82A4E0E5A00533CC0 /* bagel.ttf */; };
 		8983E6DD2A4A0689002EB335 /* ASL_translatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8983E6DC2A4A0689002EB335 /* ASL_translatorApp.swift */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		32AD6DBF2A4E086D00533CC0 /* ASL-translator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ASL-translator-Info.plist"; sourceTree = SOURCE_ROOT; };
 		32AD6DC62A4E0DBC00533CC0 /* BacasimeAntique-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BacasimeAntique-Regular.ttf"; sourceTree = "<group>"; };
 		32AD6DC82A4E0E5A00533CC0 /* bagel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bagel.ttf; sourceTree = "<group>"; };
 		8983E6D92A4A0689002EB335 /* ASL_translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASL_translator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +73,6 @@
 		8983E6DB2A4A0689002EB335 /* ASL_translator */ = {
 			isa = PBXGroup;
 			children = (
-				32AD6DBF2A4E086D00533CC0 /* ASL-translator-Info.plist */,
 				8983E6DC2A4A0689002EB335 /* ASL_translatorApp.swift */,
 				8983E6DE2A4A0689002EB335 /* ContentView.swift */,
 				89AD18782A4B8F7A00A782DB /* Alphabet.swift */,
@@ -157,7 +154,6 @@
 				8983E6E42A4A068A002EB335 /* Preview Assets.xcassets in Resources */,
 				8983E6E12A4A068A002EB335 /* Assets.xcassets in Resources */,
 				32AD6DC72A4E0DBC00533CC0 /* BacasimeAntique-Regular.ttf in Resources */,
-				32AD6DC02A4E0A1200533CC0 /* ASL-translator-Info.plist in Resources */,
 				32AD6DC92A4E0E5A00533CC0 /* bagel.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

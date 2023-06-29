@@ -24,7 +24,7 @@ struct ContentView: View {
             
             VStack {
                 Text("ASL Translator")
-                    .font(Font.custom("BacasimeAntique-Regular", size : 30))
+                    .font(Font.custom("BacasimeAntique-Regular", size : 40))
 //                    .fontWeight(.light)
                     .frame(maxHeight: .infinity, alignment: .top)
                 
