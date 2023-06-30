@@ -54,8 +54,13 @@ struct WordOfTheDay: View {
             }
             
         }
+        
+        .background(Color(red: 197/255, green: 212/255, blue: 235/255))
+        
     }
+    
 }
+
     struct WordOfTheDay_Previews: PreviewProvider {
         static var previews: some View {
             WordOfTheDay()
