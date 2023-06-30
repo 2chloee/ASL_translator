@@ -15,7 +15,8 @@ struct HistoryOfASL: View {
                     Text("History")
                         .font(.largeTitle)
                         .fontWeight(.light)
-                        .frame(maxHeight: .infinity, alignment: .top)
+                        .frame(alignment: .top)
+                        Spacer()
                         .toolbar{
                             NavigationLink(destination: WordOfTheDay()) {
                                 Text("Word of The Day")
