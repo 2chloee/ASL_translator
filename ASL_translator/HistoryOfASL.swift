@@ -16,7 +16,7 @@ struct HistoryOfASL: View {
                         .font(.largeTitle)
                         .fontWeight(.light)
                         .frame(alignment: .top)
-                        Spacer()
+                    Spacer()
                         .toolbar{
                             NavigationLink(destination: WordOfTheDay()) {
                                 Text("Word of The Day")
@@ -51,7 +51,11 @@ struct HistoryOfASL: View {
                 }
             }
         }
+       
+        .background(Color(red: 197/255, green: 212/255, blue: 235/255))
+        
     }
+    
 }
 
 struct HistoryOfASL_Previews: PreviewProvider {
